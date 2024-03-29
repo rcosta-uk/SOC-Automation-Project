@@ -68,3 +68,16 @@ Press "Y" and then Enter to confirm the change.
 Note: Make sure to review and modify the script according to your specific requirements before running it. Ensure that you have the necessary permissions to create users in Active Directory and that the Active Directory module is available on your Windows Server 2019.
 
 Also, be cautious when running scripts with administrative privileges and ensure that you understand the script's functionality and trust its source before executing it.
+
+
+# Disable Windows Updates: (if needed)
+
+To disable updates on a Windows Server 2019, you can use the Group Policy Editor or the Registry Editor. Here are the steps for both methods:
+
+Using Group Policy Editor (gpedit.msc):
+
+1. Press Win + R, type gpedit.msc, and press Enter to open the Group Policy Editor.
+2. Navigate to Computer Configuration > Administrative Templates > Windows Components > Windows Update.
+3. Double-click on the "Configure Automatic Updates" policy.
+4. Select "Disabled" to turn off automatic updates.
+5. Click "Apply" and then "OK" to save the changes.
