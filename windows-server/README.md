@@ -1,4 +1,4 @@
-Here is  how the script works:
+# Here is  how the script works:
 
 - The Active Directory module is imported to enable user creation in Active Directory.
 
@@ -28,39 +28,43 @@ Here is  how the script works:
 
 Note: This script assumes that you have the necessary permissions to create users in Active Directory and that the Active Directory module is available on your Windows Server 2019.
 
-To run the PowerShell script that creates users in Active Directory based on a CSV file and generates passwords using a dictionary, follow these steps:
+# To run the PowerShell 
 
-Save the PowerShell script in a file with a .ps1 extension, for example, create_users.ps1.
+This script will create users in Active Directory based on a CSV file and generates passwords using a dictionary, follow these steps:
 
-Save the users.csv file containing the user information in a location accessible by the script. Make sure the file has two columns: "FirstName" and "Surname".
+1.  Save the PowerShell script in a file with a .ps1 extension, for example, create_users.ps1.
 
-Save the dictionary.txt file containing the dictionary words in a location accessible by the script.
+2.  Save the users.csv file containing the user information in a location accessible by the script. Make sure the file has two columns: "FirstName" and "Surname".
 
-Open PowerShell with administrative privileges:
+3.  Save the dictionary.txt file containing the dictionary words in a location accessible by the script.
 
-Press the Windows key + X and select "Windows PowerShell (Admin)" from the menu.
+4.  Open PowerShell with administrative privileges:
+      -  Press the Windows key + X and select "Windows PowerShell (Admin)" from the menu.
 
-Navigate to the directory where the PowerShell script is saved using the cd command. For example:
+5.  Navigate to the directory where the PowerShell script is saved using the cd command. For example:
 
 ```bash
-cd C:\path\to\script
+cd C:\script
 ```
 
-If PowerShell script execution is restricted, you may need to change the execution policy. Run the following command to allow script execution:
+6.  If PowerShell script execution is restricted, you may need to change the execution policy. Run the following command to allow script execution:
 
 ```bash
 Set-ExecutionPolicy RemoteSigned
 ```
 
 Press "Y" and then Enter to confirm the change.
-Run the PowerShell script by entering the script filename:
+
+7.  Run the PowerShell script by entering the script filename:
 
 ```bash
 .\create_users.ps1
 ```
 
-The script will start executing and will create the users in Active Directory based on the information provided in the users.csv file. It will generate passwords using the dictionary words from dictionary.txt or complex passwords, as defined in the script.
-The script will output the created user information, including the first name, surname, username, and password for each user.
+8.  The script will start executing and will create the users in Active Directory based on the information provided in the users.csv file. It will generate passwords using the dictionary words from dictionary.txt or complex passwords, as defined in the script.
+
+9.  The script will output the created user information, including the first name, surname, username, and password for each user.
+
 Note: Make sure to review and modify the script according to your specific requirements before running it. Ensure that you have the necessary permissions to create users in Active Directory and that the Active Directory module is available on your Windows Server 2019.
 
 Also, be cautious when running scripts with administrative privileges and ensure that you understand the script's functionality and trust its source before executing it.
